@@ -606,6 +606,16 @@ import PitchDeckOverlappingCircleCards, {
   slideLayoutDescription as PitchDeckOverlappingCircleCardsDesc,
 } from "./pitch-deck/OverlappingCircleCards";
 
+// Djimit templates
+import DjimitCoverSlide, { Schema as DjimitCoverSchema, layoutId as DjimitCoverId, layoutName as DjimitCoverName, layoutDescription as DjimitCoverDesc } from "./djimit/CoverSlide";
+import DjimitAgendaSlide, { Schema as DjimitAgendaSchema, layoutId as DjimitAgendaId, layoutName as DjimitAgendaName, layoutDescription as DjimitAgendaDesc } from "./djimit/AgendaSlide";
+import DjimitSectionDividerSlide, { Schema as DjimitSectionDividerSchema, layoutId as DjimitSectionDividerId, layoutName as DjimitSectionDividerName, layoutDescription as DjimitSectionDividerDesc } from "./djimit/SectionDividerSlide";
+import DjimitContentSlide, { Schema as DjimitContentSchema, layoutId as DjimitContentId, layoutName as DjimitContentName, layoutDescription as DjimitContentDesc } from "./djimit/ContentSlide";
+import DjimitBulletSlide, { Schema as DjimitBulletSchema, layoutId as DjimitBulletId, layoutName as DjimitBulletName, layoutDescription as DjimitBulletDesc } from "./djimit/BulletSlide";
+import DjimitQuoteSlide, { Schema as DjimitQuoteSchema, layoutId as DjimitQuoteId, layoutName as DjimitQuoteName, layoutDescription as DjimitQuoteDesc } from "./djimit/QuoteSlide";
+import DjimitMetricsSlide, { Schema as DjimitMetricsSchema, layoutId as DjimitMetricsId, layoutName as DjimitMetricsName, layoutDescription as DjimitMetricsDesc } from "./djimit/MetricsSlide";
+import DjimitClosingSlide, { Schema as DjimitClosingSchema, layoutId as DjimitClosingId, layoutName as DjimitClosingName, layoutDescription as DjimitClosingDesc } from "./djimit/ClosingSlide";
+
 // General templates
 import GeneralIntroSlideLayout, {
   Schema as GeneralIntroSchema,
@@ -1364,6 +1374,7 @@ import educationSettings from "./Education/settings.json";
 import productOverviewSettings from "./ProductOverview/settings.json";
 import reportSettings from "./Report/settings.json";
 import pitchDeckSettings from "./pitch-deck/settings.json";
+import djimitSettings from "./djimit/settings.json";
 
 // Helper to create template entry
 
@@ -3383,6 +3394,17 @@ export const swiftTemplates: TemplateWithData[] = [
 
 // TODO: Step 4: Combine all templates into a single array For UseCases (like the ones below)
 // All templates combined
+export const djimitTemplates: TemplateWithData[] = [
+  createTemplateEntry(DjimitCoverSlide, DjimitCoverSchema, DjimitCoverId, DjimitCoverName, DjimitCoverDesc, "djimit", "CoverSlide"),
+  createTemplateEntry(DjimitAgendaSlide, DjimitAgendaSchema, DjimitAgendaId, DjimitAgendaName, DjimitAgendaDesc, "djimit", "AgendaSlide"),
+  createTemplateEntry(DjimitSectionDividerSlide, DjimitSectionDividerSchema, DjimitSectionDividerId, DjimitSectionDividerName, DjimitSectionDividerDesc, "djimit", "SectionDividerSlide"),
+  createTemplateEntry(DjimitContentSlide, DjimitContentSchema, DjimitContentId, DjimitContentName, DjimitContentDesc, "djimit", "ContentSlide"),
+  createTemplateEntry(DjimitBulletSlide, DjimitBulletSchema, DjimitBulletId, DjimitBulletName, DjimitBulletDesc, "djimit", "BulletSlide"),
+  createTemplateEntry(DjimitQuoteSlide, DjimitQuoteSchema, DjimitQuoteId, DjimitQuoteName, DjimitQuoteDesc, "djimit", "QuoteSlide"),
+  createTemplateEntry(DjimitMetricsSlide, DjimitMetricsSchema, DjimitMetricsId, DjimitMetricsName, DjimitMetricsDesc, "djimit", "MetricsSlide"),
+  createTemplateEntry(DjimitClosingSlide, DjimitClosingSchema, DjimitClosingId, DjimitClosingName, DjimitClosingDesc, "djimit", "ClosingSlide"),
+];
+
 export const allLayouts: TemplateWithData[] = [
   ...neoGeneralTemplates,
   ...neoModernTemplates,
@@ -3396,6 +3418,7 @@ export const allLayouts: TemplateWithData[] = [
   ...educationTemplates,
   ...productOverviewTemplates,
   ...reportTemplates,
+  ...djimitTemplates,
   ...pitchDeckTemplates,
 ];
 
@@ -3464,6 +3487,13 @@ export const templates: TemplateLayoutsWithSettings[] = [
     description: pitchDeckSettings.description,
     settings: pitchDeckSettings as TemplateGroupSettings,
     layouts: pitchDeckTemplates,
+  },
+  {
+    id: "djimit",
+    name: "Djimit",
+    description: djimitSettings.description,
+    settings: djimitSettings as TemplateGroupSettings,
+    layouts: djimitTemplates,
   },
   {
     id: "neo-general",

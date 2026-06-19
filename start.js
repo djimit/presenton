@@ -39,8 +39,8 @@ const hasDevArg = args.includes("--dev") || args.includes("-d");
 const isDev = hasDevArg;
 const canChangeKeys = process.env.CAN_CHANGE_KEYS !== "false";
 
-const fastapiPort = 8000;
-const nextjsPort = 3000;
+const fastapiPort = process.env.FASTAPI_PORT ? parseInt(process.env.FASTAPI_PORT) : 8000;
+const nextjsPort = process.env.NEXTJS_PORT ? parseInt(process.env.NEXTJS_PORT) : 3000;
 const appmcpPort = 8001;
 /** Must match `listen` in nginx.conf (public HTTP inside the container). */
 const nginxListenPort = 80;
