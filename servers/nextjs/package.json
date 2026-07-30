@@ -100,7 +100,8 @@
     "minimatch": "10.2.3",
     "picomatch": "4.0.4",
     "postcss": "8.5.18",
-    "tmp": "0.2.6"
+    "next>sharp": "0.35.3",
+    "tmp": "0.2.7"
   },
   "peerDependencies": {
     "zod": "^4.0.5"
