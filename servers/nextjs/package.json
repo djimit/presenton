@@ -100,10 +100,7 @@
     "minimatch": "10.2.3",
     "picomatch": "4.0.4",
     "postcss": "8.5.18",
-    "next": {
-      ".": "$next",
-      "sharp": "0.35.3"
-    },
+    "sharp": "$sharp",
     "tmp": "0.2.7"
   },
   "peerDependencies": {
