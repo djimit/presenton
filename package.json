@@ -14,7 +14,7 @@
     "check:presentation-export": "node scripts/sync-presentation-export.cjs --check-only"
   },
   "dependencies": {
-    "@llamaindex/liteparse": "^1.5.2",
-    "sharp": "^0.34.5"
+    "@llamaindex/liteparse": "^2.10.1",
+    "sharp": "^0.35.3"
   }
 }
