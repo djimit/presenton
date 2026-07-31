@@ -325,9 +325,12 @@ def _font_stylesheet_links_for_slide_html(
 
 
 def _is_font_stylesheet_url(url: str) -> bool:
-    return bool(re.search(r"\.css(?:\?|$)", url, flags=re.IGNORECASE)) or (
-        "fonts.googleapis.com" in url
-    )
+    if re.search(r"\.css(?:\?|$)", url, flags=re.IGNORECASE):
+        return True
+    try:
+        return urllib.parse.urlsplit(url).hostname == "fonts.googleapis.com"
+    except ValueError:
+        return False
 
 
 def _font_stylesheet_links_for_urls(urls: List[str]) -> str:

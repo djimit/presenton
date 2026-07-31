@@ -745,6 +745,15 @@ def test_build_slide_preview_html_adds_fixed_viewport_css(monkeypatch):
     assert '<div class="slide-content">Slide</div>' in html
 
 
+def test_font_stylesheet_url_requires_exact_google_host():
+    assert fonts_and_slides_preview._is_font_stylesheet_url(
+        "https://fonts.googleapis.com/css2?family=Khand"
+    )
+    assert not fonts_and_slides_preview._is_font_stylesheet_url(
+        "https://fonts.googleapis.com.attacker.test/font"
+    )
+
+
 def test_font_stylesheet_links_for_slide_html_extracts_tailwind_font_classes():
     links = fonts_and_slides_preview._font_stylesheet_links_for_slide_html(
         "<span class=\"font-['Poppins']\"></span>"
