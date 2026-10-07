@@ -80,7 +80,7 @@
     "dotenv": "^16.5.0",
     "electron-squirrel-startup": "^1.0.1",
     "serve-handler": "^6.1.7",
-    "sharp": "^0.35.3",
+    "sharp": "^0.35.5",
     "tailwindcss": "^4.1.5",
     "tree-kill": "^1.2.2",
     "uuid": "^13.0.0"
@@ -88,7 +88,7 @@
   "devDependencies": {
     "7zip-bin": "^5.2.0",
     "cross-env": "^7.0.3",
-    "electron": "42.2.0",
+    "electron": "42.11.12",
     "electron-builder": "^26.15.3",
     "typescript": "^5.8.3"
   },
@@ -98,14 +98,19 @@
   "overrides": {
     "@isaacs/brace-expansion": "5.0.1",
     "@opentelemetry/core": "2.8.0",
-    "brace-expansion": "5.0.8",
+    "@xmldom/xmldom": "0.8.15",
+    "brace-expansion": "5.0.12",
     "builder-util-runtime": "9.7.0",
     "follow-redirects": "1.16.0",
     "form-data": "4.0.6",
-    "js-yaml": "4.3.0",
+    "fast-uri": "3.1.8",
+    "js-yaml": "4.3.2",
+    "http-cache-semantics": "4.3.0",
     "minimatch": "10.2.3",
+    "sharp": "$sharp",
+    "source-map-js": "1.2.2",
     "tar": "7.5.21",
     "tmp": "0.2.7",
-    "undici": "7.28.0"
+    "undici": "7.29.1"
   }
 }
